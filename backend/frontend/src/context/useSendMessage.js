@@ -8,7 +8,7 @@ const useSendMessage = () => {
     setLoading(true);
     try {
         const res = await axios.post(
-            `http://localhost:4001/api/message/send/${selectedConversation._id}`,
+            `https://connectify-kek4.onrender.com/api/message/send/${selectedConversation._id}`,
             { message }, // data payload
             { withCredentials: true } // config options
         );

@@ -31,7 +31,7 @@ function Signup() {
       confirmPassword: data.confirmPassword,
     };
     // console.log(userInfo);
-    await axios.post("http://localhost:4001/api/user/signup", userInfo, {
+    await axios.post("https://connectify-kek4.onrender.com/api/user/signup", userInfo, {
       withCredentials: true
     })
     .then((response) => {

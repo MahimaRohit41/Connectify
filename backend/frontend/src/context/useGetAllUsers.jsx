@@ -9,7 +9,7 @@ const useGetAllUsers = () => {
             setLoading(true);
             // const token = Cookies.get("jwt");
             // console.log(token);
-            await axios.get("http://localhost:4001/api/user/allusers", {
+            await axios.get("https://connectify-kek4.onrender.com/api/user/allusers", {
                 withCredentials: "true",
               })
             .then((res) => {

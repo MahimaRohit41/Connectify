@@ -12,7 +12,7 @@ const useGetMessage = () => {
       if (selectedConversation && selectedConversation._id) {
         try {
           const res = await axios.get(
-            `http://localhost:4001/api/message/get/${selectedConversation._id}`, {
+            `https://connectify-kek4.onrender.com/api/message/get/${selectedConversation._id}`, {
               withCredentials: true,
             }
           );

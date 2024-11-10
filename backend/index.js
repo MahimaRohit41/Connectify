@@ -12,7 +12,7 @@ dotenv.config();
 
 // const app = express();
 app.use(cors({
-    origin: 'http://localhost:3000',  // Allow your frontend origin
+    origin: 'https://connectify-kek4.onrender.com',  // Allow your frontend origin
     credentials: true                 // Allow credentials (cookies, etc.) if needed
 }));
 const PORT = process.env.PORT || 4005;

@@ -9,7 +9,7 @@ function Logout() {
   const handleLogout = async () => {
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:4001/api/user/logout", { withCredentials: true });
+      const res = await axios.post("https://connectify-kek4.onrender.com/api/user/logout", { withCredentials: true });
       localStorage.removeItem("ChatApp");
       Cookies.remove("jwt");
       setLoading(false);

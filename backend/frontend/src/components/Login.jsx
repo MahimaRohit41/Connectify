@@ -21,7 +21,7 @@ const Login = () => {
             email: data.email,
             password: data.password
         }
-        await axios.post("http://localhost:4001/api/user/login", userInfo, { withCredentials: true })
+        await axios.post("https://connectify-kek4.onrender.com/api/user/login", userInfo, { withCredentials: true })
             .then((response) => {
                 if (response.data)
                 {
