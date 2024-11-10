@@ -43,7 +43,7 @@ const Login = () => {
         <div className="flex h-screen items-center justify-center  bg-slate-900">
             <form onSubmit={handleSubmit(onSubmit)} className="border border-white px-6 py-2 rounded-md space-y-3 w-96">
                 <h1 className="text-2xl text-center">
-                    Chat<span className="text-green-500 font-semibold">App</span>
+                    <span className="text-green-500 font-semibold">Connectify</span>
                 </h1>
                 <h2 className="text-xl text-white font-bold">Login</h2>
                 <br />
@@ -87,7 +87,7 @@ const Login = () => {
                         This field is required
                     </span>
                 )}
-                <div className="flex justify-between">
+                <div className="flex justify-between text-white">
                     <p>
                         New user?
                         <Link

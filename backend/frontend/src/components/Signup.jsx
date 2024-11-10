@@ -59,7 +59,7 @@ function Signup() {
           className="border border-white px-6 py-2 rounded-md space-y-3 w-96"
         >
           <h1 className="text-2xl text-center">
-            Chat<span className="text-green-500 font-semibold">App</span>
+            <span className="text-green-500 font-semibold">Connectify</span>
           </h1>
           <h2 className="text-xl text-white font-bold">Signup</h2>
           <br />
@@ -167,7 +167,7 @@ function Signup() {
           )}
 
           {/* Text & Button */}
-          <div className="flex justify-between">
+          <div className="flex justify-between text-white">
             <p>
               Have an account?
               <Link

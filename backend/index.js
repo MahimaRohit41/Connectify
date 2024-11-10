@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import userRouter from './routes/user.route.js';
 import messageRouter from './routes/message.route.js';
 import cors from "cors";
+import path from 'path';
 import cookieParser from "cookie-parser";
 import { app, server } from "./Socket.IO/server.js";
 
@@ -30,9 +31,15 @@ app.use(cookieParser());
 app.use("/api/user", userRouter);
 app.use("/api/message", messageRouter);
 
-// app.get("/", (req,res) => {
-//     res.send("Hello Rudra, Miss you")
-// });
+// Deployment code
+if(process.env.NODE_ENV === "Production"){
+    const dirPath = path.resolve();
+
+    app.use(express.static("./frontend/build"));
+    app.get("*", (req,res) => {
+        res.sendFile(path.resolve(dirPath, "./frontend/build", "index.html"));
+    })
+}
 
 server.listen(PORT, () => {
     console.log(`Server started on Port ${PORT}`);
