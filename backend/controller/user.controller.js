@@ -1,6 +1,6 @@
 import createTokenAndSaveCookie from "../jwt/generateToken.js";
 import { User } from "../model/user.model.js";
-import brycpt from "bcrypt";
+import brycpt from "bcryptjs";
 
 export const signup = async (req, res) => {
     const { name, email, password, confirmPassword } = req.body;
