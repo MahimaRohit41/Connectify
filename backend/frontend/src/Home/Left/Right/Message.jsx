@@ -3,7 +3,7 @@ import useGetMessage from '../../../context/useGetMessage';
 
 const Message = ({ message }) => {
   const authUser = JSON.parse(localStorage.getItem("ChatApp"));
-  const itsMe = message.senderId === authUser.user._id;
+  const itsMe = message.senderId === authUser?.user?._id;
 
   const chatName = itsMe ? " chat-end" : "chat-start";
   const chatColor = itsMe ? "bg-blue-500" : "";

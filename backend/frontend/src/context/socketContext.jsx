@@ -16,7 +16,7 @@ export const SocketProvider = ({ children }) => {
     if (authUser) {
       const socket = io("https://connectify-kek4.onrender.com", {
         query: {
-          userId: authUser.user._id,
+          userId: authUser?.user?._id,
         },
       });
       setSocket(socket);
