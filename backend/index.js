@@ -32,7 +32,7 @@ app.use("/api/user", userRouter);
 app.use("/api/message", messageRouter);
 
 // Deployment code
-if(process.env.NODE_ENV === "Production"){
+if(process.env.NODE_ENV === "production"){
     const dirPath = path.resolve();
 
     app.use(express.static("./frontend/build"));
