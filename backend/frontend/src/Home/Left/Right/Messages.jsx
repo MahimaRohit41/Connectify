@@ -6,7 +6,6 @@ import useGetSocketMessage from '../../../context/useGetSocketMessages';
 
 const Messages = () => {
     const { loading, messages  } = useGetMessage();
-    console.log(messages);
     useGetSocketMessage();
 
     const lastMsgRef = useRef();

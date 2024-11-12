@@ -7,13 +7,10 @@ const useGetAllUsers = () => {
     useEffect(() => {
        const getAllUsers = async () => {
             setLoading(true);
-            // const token = Cookies.get("jwt");
-            // console.log(token);
             await axios.get("https://connectify-kek4.onrender.com/api/user/allusers", {
                 withCredentials: "true",
               })
             .then((res) => {
-                console.log(res);
                 setAllUsers(res.data);
                 setLoading(false);
             })

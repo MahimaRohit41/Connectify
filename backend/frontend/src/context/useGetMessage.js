@@ -16,11 +16,9 @@ const useGetMessage = () => {
               withCredentials: true,
             }
           );
-          console.log(res);
           setMessage(res.data);
           setLoading(false);
         } catch (error) {
-          console.log("Error in getting messages", error);
           setLoading(false);
         }
       }

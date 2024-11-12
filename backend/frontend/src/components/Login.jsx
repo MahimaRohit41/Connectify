@@ -16,7 +16,6 @@ const Login = () => {
 
 
     const onSubmit = async (data) => {
-        console.log(data);
         const userInfo = {
             email: data.email,
             password: data.password
@@ -32,7 +31,6 @@ const Login = () => {
                 // navigateTo("/");
             })
             .catch((error) => {
-                console.log(error);
                 if (error.response) {
                     toast.error("Error: " + error.response?.data?.error);
                 }

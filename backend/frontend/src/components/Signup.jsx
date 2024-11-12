@@ -23,29 +23,24 @@ function Signup() {
   };
 
   const onSubmit = async (data) => {
-    console.log(data);
     const userInfo = {
       name: data.name,
       email: data.email,
       password: data.password,
       confirmPassword: data.confirmPassword,
     };
-    // console.log(userInfo);
     await axios.post("https://connectify-kek4.onrender.com/api/user/signup", userInfo, {
       withCredentials: true
     })
     .then((response) => {
-      console.log(response);
         if(response.data)
         {
             toast.success("User registered successfully");
         }
         localStorage.setItem("ChatApp", JSON.stringify(response.data));
-        console.log(response.data);
         setAuthUser(response.data);   
     })
     .catch((error) => {
-        console.log(error);
         if (error.response) {
             toast.error("Error: " + error?.response?.data?.error);
         }

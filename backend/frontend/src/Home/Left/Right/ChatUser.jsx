@@ -12,7 +12,6 @@ function Chatuser() {
         return onlineUsers.includes(userId) ? "Online" : "Offline";
       };
 
-    // console.log(selectedConversation.name);
     return (
         <div className="relative flex items-center h-[8vh] justify-center gap-4 bg-slate-800 hover:bg-slate-700 duration-300 rounded-md">
             <label
