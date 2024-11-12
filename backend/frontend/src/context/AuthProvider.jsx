@@ -4,7 +4,7 @@ import Cookies from "js-cookie";
 export const AuthContext = createContext();
 
 export const AuthProvider = ({children}) => {
-    const initialUserState =  Cookies.get("jwt") || localStorage.getItem("ChatApp");
+    const initialUserState =  localStorage.getItem("ChatApp")|| Cookies.get("jwt") ;
     const [authUser, setAuthUser] = useState( initialUserState ? initialUserState : undefined);
   return (
     <div>
