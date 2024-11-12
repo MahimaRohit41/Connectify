@@ -31,8 +31,9 @@ const Login = () => {
                 // navigateTo("/");
             })
             .catch((error) => {
+                console.log(error);
                 if (error.response) {
-                    toast.error("Error: " + error.response?.data?.error);
+                    toast.error("Error: " + error.response?.data?.message);
                 }
             });
     }

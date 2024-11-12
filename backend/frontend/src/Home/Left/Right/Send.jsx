@@ -21,7 +21,7 @@ function Send() {
             placeholder="Type here"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="border border-gray-700 rounded-xl outline-none mt-1 px-4 py-3 w-full text-black"
+            className="border border-gray-700 rounded-xl outline-none mt-1 px-4 py-3 w-full bg-white text-black"
           />
         </div>
         <button>

@@ -16,7 +16,7 @@ export const signup = async (req, res) => {
         }
 
         if (password != confirmPassword) {
-            res.status(500).json({ message: "assword and confirmPassword should be same" })
+            res.status(500).json({ message: "Password and confirmPassword should be same" })
         };
 
         const hashedPassword = await brycpt.hash(password, 10);
@@ -68,7 +68,7 @@ export const login = async (req,res) => {
               });
         }
         else{
-            res.status(400).json({message: "Enter correct password"});
+            res.status(400).json({message: "Password is incorrect"});
         }
     }
     catch(error){
